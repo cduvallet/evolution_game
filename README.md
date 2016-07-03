@@ -107,7 +107,8 @@ After enough rounds, ask the students to again write the surviving bacterial (am
 
 # Example
 
-```$ python play_game.py
+```text
+$ python play_game.py
 ---------------------
 ROUND ONE - MUTATION
 ---------------------
