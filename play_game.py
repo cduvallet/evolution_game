@@ -53,19 +53,35 @@ def translate_seqs(seqs, codontable):
         prots.append(translate_seq(seqs[i], codontable))
     return prots
 
-def select_prots(prots, environments, die, save):
-    newprots = copy.copy(prots)
-    
-    for i in range(0, len(prots)):
-        env = environments[i]
-        prot = prots[i]
-        for j in range(0,len(prot)):
-            if prot[j] in die[env][j+1]:
-                if prot[j] not in save[env][j+1]:
+def select_prot(prot, die, save): 
+    for j in range(0,len(prot)):
+        if prot[j] in die[j+1]:
+            if prot[j] == '_':
+                prot = "dead"
+                break
+            else:
+                # Try to save the bug.
+                # save[env][j] = a dict that can save the bacteria from this
+                # specific lethal mutation
+                try:
+                    savelocs = save[j+1].keys()
+                    for s in savelocs:
+                        # s are all of the codon locations that can save this protein
+                        if prot[s-1] in save[j+1][s]:
+                            break
+                except:
                     prot = "dead"
                     break
-        newprots[i] = prot
-    
+    return prot
+
+def select_prots(prots, environments, die, save):
+    newprots = copy.copy(prots)  
+    for i in range(0, len(prots)):
+        env = environments[i]
+        save_tmp = save[env]
+        die_tmp = die[env]
+        prot = prots[i]
+        newprots[i] = select_prot(prot, die_tmp, save_tmp)
     return newprots
 
 def update_prots(prots, env2s, s2env):
