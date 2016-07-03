@@ -110,7 +110,7 @@ if __name__ == '__main__':
     p_mut = load_data.load_p_mut(num_die=args.d)
     
     ## Part 1: Generating diversity
-    print('----------------\nROUND ONE - MUTATION\n----------------')
+    print('---------------------\nROUND ONE - MUTATION\n---------------------')
     # After m rounds of mutation, how many unique sequences does the class have?
     for i in range(0, args.m):
         loc_rolls = roll_die(seqs.shape)
@@ -119,7 +119,7 @@ if __name__ == '__main__':
         print('After {} rounds of mutation, there are {} unique sequences'.format(i+1, len(set(seqs))))
     
     ## Part 2: Selecting for function
-    print('----------------\nROUND TWO - SELECTION\n----------------')
+    print('---------------------\nROUND TWO - SELECTION\n---------------------')
 
     codontable = load_data.load_codontable()
 

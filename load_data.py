@@ -107,8 +107,11 @@ def load_p_mut(num_die=2):
     return p_mut
     
 def load_selection_dict():
-    ## Need to figure out (1) how to encode die/live/die only if don't have this other thing
-    ## Need to figure out which codons to assign to which thing!
+    # die_dict = {environment: {position1: [values, that, kill],
+    #                           position2: [values, that, kill], ...}
+    #             environment2: {position1: [values, that, kill],
+    #                           position2: [values, that, kill], ...}
+    #             ...}  
     die_dict = {'soil': {1: ['A', 'C', 'E', 'D', 'G', 'H', 'I', 'K', 'N', 'Q', 'P', 'S', 'R', 'T', 'W', 'Y', '_'],
                          2: ['C', 'G', 'H', 'K', 'N', 'Q', 'P', 'S', 'R', 'T', 'W', 'Y', '_'],
                          3: ['_'],
@@ -132,25 +135,4 @@ def load_selection_dict():
     save_dict = {'soil': {1: {3: ['D', 'E', 'Y', 'V', 'C', 'S', 'K', 'R']}},
                  'gut': {2: {1: ['S', 'P', 'T', 'A', 'M',' Y']}},
                  'ocean': {3: {4: ['F', 'L', 'I', 'M', 'V', 'A', 'P']}}}
-                 
-#    save_dict = {'soil': {1: [],
-#                          2: [],
-#                          3: ['D', 'E', 'Y', 'V', 'C', 'S'],  # if die bc of position 1 but have this in position 3, survive
-#                          4: []},
-#                 'gut': { 1: ['S', 'P', 'T', 'A', 'M',' Y'],  # if die bc of position 2 but have this in position 1, survive
-#                          2: [],
-#                          3: [],
-#                          4: []},
-#                 'ocean': {1: [],
-#                           2: [],
-#                           3: [],
-#                           4: ['F', 'L', 'I', 'M', 'V', 'A', 'P']}   # if die bc of position 3 but have this, survive
-#                 }
-                 
     return die_dict, save_dict
-#def load_p_transition():
-#    p_trans = {'A': 
-#                {'A': 
-#                 'T':
-#                 'C': }
-#        }
