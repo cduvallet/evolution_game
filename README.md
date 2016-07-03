@@ -107,42 +107,42 @@ After enough rounds, ask the students to again write the surviving bacterial (am
 
 # Example
 
->$ python play_game.py
->---------------------
->ROUND ONE - MUTATION
->---------------------
->After 1 rounds of mutation, there are 3 unique sequences
->After 2 rounds of mutation, there are 4 unique sequences
->After 3 rounds of mutation, there are 5 unique sequences
->After 4 rounds of mutation, there are 5 unique sequences
->After 5 rounds of mutation, there are 6 unique sequences
->After 6 rounds of mutation, there are 8 unique sequences
->After 7 rounds of mutation, there are 10 unique sequences
->After 8 rounds of mutation, there are 10 unique sequences
->After 9 rounds of mutation, there are 10 unique sequences
->After 10 rounds of mutation, there are 10 unique sequences
->---------------------
->ROUND TWO - SELECTION
->---------------------
->After 0 rounds of selection, this is what we have:
->        gut: MERS, MVRS
->        soil: MVRC
->        ocean: MVRS, MVPP, MVCS
->After 1 rounds of selection, this is what we have:
->        gut: IVRS, MERS, MVRS
->        soil: MVRC
->        ocean: MVRS, MVPP, MVCS
->After 2 rounds of selection, this is what we have:
->        gut: IVRS, MERS, MVRS
->        soil: MVRC, MVPC
->        ocean: MVRS, MVPP, MVCS
->After 3 rounds of selection, this is what we have:
->        gut: IVRS, MERS, MVRS, KERS
->        soil: MVRC, MVPC
->        ocean: MVRS, MVPP, MVCS
->After 4 rounds of selection, this is what we have:
->        gut: IVRS, MERP, MVLS, MVRS, KERS
->        soil: MVRC, MVPC, MLRC
->        ocean: MVRS, MVPP
-
+```$ python play_game.py
+---------------------
+ROUND ONE - MUTATION
+---------------------
+After 1 rounds of mutation, there are 3 unique sequences
+After 2 rounds of mutation, there are 4 unique sequences
+After 3 rounds of mutation, there are 5 unique sequences
+After 4 rounds of mutation, there are 5 unique sequences
+After 5 rounds of mutation, there are 6 unique sequences
+After 6 rounds of mutation, there are 8 unique sequences
+After 7 rounds of mutation, there are 10 unique sequences
+After 8 rounds of mutation, there are 10 unique sequences
+After 9 rounds of mutation, there are 10 unique sequences
+After 10 rounds of mutation, there are 10 unique sequences
+---------------------
+ROUND TWO - SELECTION
+---------------------
+After 0 rounds of selection, this is what we have:
+        gut: MERS, MVRS
+        soil: MVRC
+        ocean: MVRS, MVPP, MVCS
+After 1 rounds of selection, this is what we have:
+        gut: IVRS, MERS, MVRS
+        soil: MVRC
+        ocean: MVRS, MVPP, MVCS
+After 2 rounds of selection, this is what we have:
+        gut: IVRS, MERS, MVRS
+        soil: MVRC, MVPC
+        ocean: MVRS, MVPP, MVCS
+After 3 rounds of selection, this is what we have:
+        gut: IVRS, MERS, MVRS, KERS
+        soil: MVRC, MVPC
+        ocean: MVRS, MVPP, MVCS
+After 4 rounds of selection, this is what we have:
+        gut: IVRS, MERP, MVLS, MVRS, KERS
+        soil: MVRC, MVPC, MLRC
+        ocean: MVRS, MVPP
+```
 	
