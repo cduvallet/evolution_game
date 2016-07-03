@@ -1,0 +1,6 @@
+Position,Function,Amino acids,Specific function,Fate
+1,growth rate,"F, I, L, V","low growth rate, bacteria doesn't need a lot of energy to survive",Bacteria without this don't survive
+2,protection,,,"This one isn't so important - predators 
+are dilute enough that bacteria can escape"
+3,metabolism,"F, K, N, P, S, T","broad metabolism, bacteria can eat a wide variety of things",Bacteria without this don't survive
+4,oxygen requirement,"F, L, I, M, V, A, P","facultative anaerobe, bacteria can surive in both aerobic and anaerobic environments",Bacteria that don't have broad metabolism but do have this can survive

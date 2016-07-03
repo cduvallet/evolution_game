@@ -1,0 +1,5 @@
+Position,Function,Amino acids,Specific function,Fate
+1,growth rate,"F, L, I, V","High growth rate, gives bacteria the ability to adapt quickly to new open niches",Bacteria without this don't survive
+2,protection,"A, E, D, F, I, L, V",Cell wall anti-phage protein,Bacteria without this don't survive
+3,metabolism,"D, E, Y, V, C, S, K, R",Allows the bacteria to eat a very specific nutrient (that other bacteria can't eat),Bacteria that don't have a high growth but do have this can survive
+4,oxygen requirement,"T, S, Y, Q, N","Strict anaerobe, bacteria can only survive in no-oxygen conditions",Bacteria with this don't survive

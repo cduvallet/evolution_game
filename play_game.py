@@ -96,7 +96,7 @@ def update_prots(prots, env2s, s2env):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('-s', help='starting sequence. Should be length 12', default='ATCGTACGATCC')    
+    parser.add_argument('-s', help='starting sequence. Should be length 12', default='ATGGTACGATCG')    
     parser.add_argument('-n', help='number of students in class.', default=15, type=int) 
     parser.add_argument('-m', help='number of rounds of mutation (part 1: generate diversity)', default=10, type=int)
     parser.add_argument('-x', help='number of rounds of mutation between each selection event (part 2: selection)', default=5, type=int)

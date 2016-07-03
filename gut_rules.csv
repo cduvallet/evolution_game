@@ -1,0 +1,5 @@
+Position,Function,Amino acids,Specific function,Fate
+1,growth rate,"S, P, T, A","Persistence, bacteria can go into 'dormant' mode",Bacteria that don't have antibiotic resistance but do have this can survive
+2,protection,"H, N, Q, V, Y",Antibiotic resistance,Bacteria without this don't survive
+3,metabolism,,,All bacteria can survive - there's lots of food in the gut! :D
+4,oxygen requirement,"H, K, D, E","Aerobic, bacteria needs oxygen to survive",Bacteria with this don't survive
