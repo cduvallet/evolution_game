@@ -12,7 +12,7 @@ Run `python play_game.py`.
 
 You can change the starting sequence (`-s`), the number of students in the class (`-n`), the number of rounds of mutation in Part 1 (`-m`), the number of rounds of mutation/selection in Part 2 (`-x`), and the number of die (`-d`) from the command line.
 
-You can change whether and how a base pair is mutated in `load_p_mut` and the selection rules in `load_selection_dict`.
+You can change whether and how a base pair is mutated in `load_p_mut` and the selection rules in `load_selection_dict` in `load_data.py`.
 
 # Playing the game
 
@@ -26,11 +26,12 @@ You can change whether and how a base pair is mutated in `load_p_mut` and the se
 
 All students start with the same 12 base pair sequence. I've tested this code with the starting sequence `ATGGTACGATCG` and it seems to work pretty well.
 
-## Part 1: Diversity generation
+### Part 1: Diversity generation
 
 Have each student roll their die twice. 
 * The first roll indicates which base pair location will be mutated. 
 * The second roll decides what happens to that base pair. Use the following table to determine what happens to the base pair:
+
 | Die roll | Action        |
 |----------|---------------|
 | 2        | Mutate to `A` |
@@ -80,7 +81,7 @@ Have the students translate their sequences into proteins. Have them use the fol
 | Position | Function           | Amino acids         | Specific function                                                                    | Fate                                                                        |
 |----------|--------------------|---------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
 | 1        | growth rate        | F, I, L, V          | low growth rate, bacteria doesn't need a lot of energy to survive                    | Bacteria without this don't survive                                         |
-| 2        | protection         |                     |                                                                                      | All bacteria survive - predators are dilute enough that bacteria can escape |
+| 2        | protection         |                     |                                                                                      | This one isn't so important - predators are dilute enough that bacteria can escape |
 | 3        | metabolism         | F, K, N, P, S, T    | broad metabolism, bacteria can eat a wide variety of things                          | Bacteria without this don't survive                                         |
 | 4        | oxygen requirement | F, L, I, M, V, A, P | facultative anaerobe, bacteria can surive in both aerobic and anaerobic environments | Bacteria that don't have broad metabolism but do have this can survive      |
 
@@ -103,6 +104,4 @@ After enough rounds, ask the students to again write the surviving bacterial (am
 	- The most diverse proteins are those that have non-essential functions
 	- Or ones that give the bug an advantage
 - Bonus question: how do we define bacterial species?
-	
-	
 	
