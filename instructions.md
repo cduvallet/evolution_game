@@ -36,7 +36,7 @@ Split the class into three groups, and place each group into *soil*, *ocean*, or
 
 Translate your sequences into proteins. Then, use the following tables to determine whether your microbe can survive in its new environment. If any of the codons are the STOP codon, the bacteria does not survive.
 
-##### Gut
+#### Gut
 
 | Position | Function           | Amino acids   | Specific function                                | Fate                                                                        |
 |----------|--------------------|---------------|--------------------------------------------------|-----------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ Translate your sequences into proteins. Then, use the following tables to determ
 | 3        | metabolism         |               |                                                  | All bacteria can survive - there's lots of food in the gut! :D              |
 | 4        | oxygen requirement | H, K, D, E    | Aerobic, bacteria needs oxygen to survive        | Bacteria with this don't survive                                            |
 
-##### Soil
+#### Soil
 
 | Position | Function           | Amino acids            | Specific function                                                                   | Fate                                                                |
 |----------|--------------------|------------------------|-------------------------------------------------------------------------------------|---------------------------------------------------------------------|
@@ -54,7 +54,7 @@ Translate your sequences into proteins. Then, use the following tables to determ
 | 3        | metabolism         | D, E, Y, V, C, S, K, R | Allows the bacteria to eat a very specific nutrient (that other bacteria can't eat) | Bacteria that don't have a high growth but do have this can survive |
 | 4        | oxygen requirement | T, S, Y, Q, N          | Strict anaerobe, bacteria can only survive in no-oxygen conditions                  | Bacteria with this don't survive                                    |
 
-##### Ocean
+#### Ocean
 
 | Position | Function           | Amino acids         | Specific function                                                                    | Fate                                                                        |
 |----------|--------------------|---------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
