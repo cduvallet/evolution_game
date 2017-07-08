@@ -1,6 +1,9 @@
 # The game
 
-This game was developed for the [Young Leaders in STEM](http://www.scienceclubforgirls.org/teen-programs-overview) summer program led by the [Cambridge Science Club for Girls](http://www.scienceclubforgirls.org/).
+This game was developed for the
+[Young Leaders in STEM](http://www.scienceclubforgirls.org/teen-programs-overview)
+summer program led by the
+[Cambridge Science Club for Girls](http://www.scienceclubforgirls.org/).
 
 It was developed as part of a 3-day lesson on bacteria and the human microbiome to teach concepts about mutation, diversity, selection, and evolution.
 
@@ -8,7 +11,7 @@ It can be simulated using this code or played with a classroom of students.
 
 # Simulating the game
 
-Run `python play_game.py`. 
+Run `python play_game.py`.
 
 You can change the starting sequence (`-s`), the number of students in the class (`-n`), the number of rounds of mutation in Part 1 (`-m`), the number of rounds of mutation/selection in Part 2 (`-x`), and the number of die (`-d`) from the command line.
 
@@ -28,8 +31,8 @@ All students start with the same 12 base pair sequence. I've tested this code wi
 
 ### Part 1: Diversity generation
 
-Have each student roll their die twice. 
-* The first roll indicates which base pair location will be mutated. 
+Have each student roll their die twice.
+* The first roll indicates which base pair location will be mutated.
 * The second roll decides what happens to that base pair. Use the following table to determine what happens to the base pair:
 
 | Die roll | Action        |
@@ -42,11 +45,16 @@ Have each student roll their die twice.
 
 ###### Note: this decision table is encoded in `p_mut` in the `load_data.py` module. There is also a decision table available for 3-die games.
 
-After N rounds of mutation, ask the students to write their sequences on the board and ask them to count how many unique sequences now exist.
+After each mutation, have the students translate their DNA sequence into a protein.
 
-##### Learning outcome
+After 10 rounds of mutation, ask the students to write their sequences on the board and ask them to count how many unique sequences now exist.
 
-Even though mutations are relatively rare, they lead to a lot of diversity!
+##### Discussion questions and learning outcomes
+
+* How rare are these mutations? How much diversity did they lead to? Is this what you would have expected?
+    - *Even though mutations are relatively rare, they lead to a lot of diversity!*
+* How does the DNA sequence diversity compare to the protein diversity?
+    - *There can be more DNA diversity than protein diversity, because the DNA --> protein code is redundant!*
 
 ### Part 2: Selection
 
@@ -62,28 +70,28 @@ Have the students translate their sequences into proteins. Have them use the fol
 
 | Position | Function           | Amino acids   | Specific function                                | Fate                                                                        |
 |----------|--------------------|---------------|--------------------------------------------------|-----------------------------------------------------------------------------|
-| 1        | growth rate        | S, P, T, A    | Persistence, bacteria can go into 'dormant' mode | Bacteria that don't have antibiotic resistance but do have this can survive |
-| 2        | protection         | H, N, Q, V, Y | Antibiotic resistance                            | Bacteria without this don't survive                                         |
+| 1        | growth rate        | S, P, T, A    | Sporulation, bacteria can go into 'dormant' mode when they're challenged | Bacteria that don't have antibiotic resistance but do have this can survive |
+| 2        | protection         | H, N, Q, V, Y | Antibiotic resistance                            | Humans are constantly taking antibiotics, so bacteria without this don't survive                                         |
 | 3        | metabolism         |               |                                                  | All bacteria can survive - there's lots of food in the gut! :D              |
-| 4        | oxygen requirement | H, K, D, E    | Aerobic, bacteria needs oxygen to survive        | Bacteria with this don't survive                                            |
+| 4        | oxygen requirement | H, K, D, E    | Aerobic, bacteria needs oxygen to survive        | The human gut doesn't have any oxygen in it, so bacteria with this don't survive                                            |
 
 ##### Soil
 
 | Position | Function           | Amino acids            | Specific function                                                                   | Fate                                                                |
 |----------|--------------------|------------------------|-------------------------------------------------------------------------------------|---------------------------------------------------------------------|
-| 1        | growth rate        | F, L, I, V             | High growth rate, gives bacteria the ability to adapt quickly to new open niches    | Bacteria without this don't survive                                 |
-| 2        | protection         | A, E, D, F, I, L, V    | Cell wall anti-phage protein                                                        | Bacteria without this don't survive                                 |
-| 3        | metabolism         | D, E, Y, V, C, S, K, R | Allows the bacteria to eat a very specific nutrient (that other bacteria can't eat) | Bacteria that don't have a high growth but do have this can survive |
-| 4        | oxygen requirement | T, S, Y, Q, N          | Strict anaerobe, bacteria can only survive in no-oxygen conditions                  | Bacteria with this don't survive                                    |
+| 1        | growth rate        | F, L, I, V             | High growth rate, gives bacteria the ability to adapt quickly to new open niches    | Soil is a battlefield, bacteria need to be able to adapt quickly to open niches. Bacteria without this don't survive                                 |
+| 2        | protection         | A, E, D, F, I, L, V    | Cell wall anti-phage protein                                                        | Soil is teeming with microorganisms, including bacterial viruses! Bacteria without this protein can't fend off virsuses and don't survive                                 |
+| 3        | metabolism         | D, E, Y, V, C, S, K, R | Allows the bacteria to eat a very specific nutrient (that other bacteria can't eat) | Bacteria that don't have a high growth but that do have this can survive, because they can eat something that no one else can |
+| 4        | oxygen requirement | T, S, Y, Q, N          | Strict anaerobe, bacteria can only survive in no-oxygen conditions                  | Bacteria with this don't survive because soil has oxygen                                    |
 
 ##### Ocean
 
 | Position | Function           | Amino acids         | Specific function                                                                    | Fate                                                                        |
 |----------|--------------------|---------------------|--------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
-| 1        | growth rate        | F, I, L, V          | low growth rate, bacteria doesn't need a lot of energy to survive                    | Bacteria without this don't survive                                         |
+| 1        | growth rate        | F, I, L, V          | low growth rate, bacteria doesn't need a lot of energy to survive                    | The ocean does not have a lot of nutrients, so bacteria that need a lot of energy (i.e. ones that don't have this) die                                         |
 | 2        | protection         |                     |                                                                                      | This one isn't so important - predators are dilute enough that bacteria can escape |
-| 3        | metabolism         | F, K, N, P, S, T    | broad metabolism, bacteria can eat a wide variety of things                          | Bacteria without this don't survive                                         |
-| 4        | oxygen requirement | F, L, I, M, V, A, P | facultative anaerobe, bacteria can surive in both aerobic and anaerobic environments | Bacteria that don't have broad metabolism but do have this can survive      |
+| 3        | metabolism         | F, K, N, P, S, T    | broad metabolism, bacteria can eat a wide variety of things                          | The ocean is very dilute, so bacteria need to be able to eat many different things. Bacteria without this don't survive                                         |
+| 4        | oxygen requirement | F, L, I, M, V, A, P | sulfate reduction, bacteria can "breathe" sulfate | Bacteria that don't have a broad metabolism but do have this can survive, because they can make use of something that most other bacteria can't      |
 
 If a student's bacteria does not survive, have her replace her sequence with one from her group which did survive. If no bacteria in the entire group (environment) survived, have them make one up that would survive and go with that.
 
@@ -92,13 +100,18 @@ Go through N more rounds of mutation and selection. Like in Part 1, have student
 After enough rounds, ask the students to again write the surviving bacterial (amino acid) sequences on the board, separated by environment. Discuss patterns that they noticed.
 
 ##### Questions for the the class
+- What was the difference between parts 1 and 2?
+  - *Part 1 didn't have any selection, so all mutations survived. Part 2 added selection, so that some mutations were helpful and some were harmful.*
+- How does this game relate to evolution? What other aspects of evolution are missing in this game?
+  - *It demonstrates the principles of evolution! Mutations lead to diversity, selection selects for organisms which can survive.*
+  - *Competition between organisms is missing."
 - Does it take more or less time for diversity to be generated when you add selection? Why?
 	- *More time, because much of the diversity generated in each round does not survive*
 - Which protein locations seem to be most diverse? Which ones are least diverse? Why?
 	- *Proteins which provide bacteria an essential function are least diverse, because if a microbe is missing that specific protein then it dies and does not reproduce.*
 	- *Proteins which give bacteria an additional function (i.e. can save it from death due to a lacking protein elsewhere) are intermediately diverse - in most cases, they don't matter, but in some, they matter a lot.*
 
-##### Learning outcomes	
+##### Learning outcomes
 - Environments with selective pressures limit the types of organisms that can survive
 - Diversity is still generated, but at a much slower rate than just random mutations
 	- The most diverse proteins are those that have non-essential functions
@@ -146,4 +159,3 @@ After 4 rounds of selection, this is what we have:
         soil: MVRC, MVPC, MLRC
         ocean: MVRS, MVPP
 ```
-	
