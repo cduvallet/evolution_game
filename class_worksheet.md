@@ -1,3 +1,7 @@
+# Young Leaders in STEM - Mutation game
+> July 11, 2017    
+> Claire Duvallet    
+> http://github.com/cduvallet/evolution_game
 
 ## Materials
 * Students, to be divided into 3 groups
