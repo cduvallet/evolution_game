@@ -6,7 +6,6 @@
 ## Materials
 * Students, to be divided into 3 groups
 * 2 6-faced die per student
-  * Game can also be played with 3 die. This makes the evolutionary dynamics different. Empirically (from this code), I prefer using 2 die.
 * Writing materials
 
 ## Starting the game
